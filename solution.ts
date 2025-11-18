@@ -62,6 +62,7 @@ interface Book{
 }
 const printBookDetails = (book: Book):void =>{
     console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable ? 'Yes' : 'No'}`);
+    return `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable ? 'Yes' : 'No'}`;
 }
 
 
@@ -104,4 +105,5 @@ const calculateTotalPrice = (products: Product[]): number => {
         const discountAmount = product.discount ? (basePrice * product.discount) / 100 : 0;
         return basePrice - discountAmount;
       }).reduce((total, current) => total + current, 0);
+
 };
