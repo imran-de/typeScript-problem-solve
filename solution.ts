@@ -60,7 +60,7 @@ interface Book{
     publishedYear: number;
     isAvailable: boolean;
 }
-const printBookDetails = (book: Book):void =>{
+const printBookDetails = (book: Book):string =>{
     console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable ? 'Yes' : 'No'}`);
     return `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable ? 'Yes' : 'No'}`;
 }
@@ -107,3 +107,4 @@ const calculateTotalPrice = (products: Product[]): number => {
       }).reduce((total, current) => total + current, 0);
 
 };
+
